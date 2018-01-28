@@ -4,26 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Hello world!</title>
 	<!-- memasukkan Vue.js dari CDN unpkg-->
-	<script src="https://unpkg.com/vue"></script>
-	<script>
-	// menunggu hingga element <body> selesai dimuat
-	// pada jQuery sama seperti $(document).ready()
-	document.addEventListener('DOMContentLoaded', function () {
-		// membuat instance vue yang baru dengan element template serta
-		// data atau state yang perlu ditampilkan
-		new Vue({
-				el: '#app',
-					data: {
-					message: 'Hello World! This is my first vue - Firman Perangin-angin'
-				}
-			})
-	})
-	</script>
+	
 </head>
 <body>
 	<div id="app">
 		<p v-text="message"></p>
-		<p>{{ message }} okelah</p>
+		<p>{{ nama }} - {{ umur }}</p>
 	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script>
+		var vo = new Vue({
+			el: '#app',
+				data: {
+				message: 'Hello World! This is my first vue - Firman Perangin-angin',
+				nama: 'Firman Perangin-angin',
+				umur: '33'
+			}
+		})
+	</script>
 </body>
 </html>
